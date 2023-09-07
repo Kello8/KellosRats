@@ -1,6 +1,12 @@
 package net.kello.kellosrats;
 
 import com.mojang.logging.LogUtils;
+import net.kello.kellosrats.entity.ModEntities;
+import net.kello.kellosrats.entity.client.RatRenderer;
+import net.kello.kellosrats.item.ModCreativeModeTabs;
+import net.kello.kellosrats.item.ModItems;
+import net.kello.kellosrats.sound.ModSounds;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -12,6 +18,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
 @Mod(KellosRats.MOD_ID)
 public class KellosRats {
@@ -23,6 +30,14 @@ public class KellosRats {
 
             modEventBus.addListener(this::commonSetup);
 
+            ModCreativeModeTabs.register(modEventBus);
+            ModItems.register(modEventBus);
+
+            ModEntities.register(modEventBus);
+            ModSounds.register(modEventBus);
+
+            GeckoLib.initialize();
+
             MinecraftForge.EVENT_BUS.register(this);
             modEventBus.addListener(this::addCreative);
         }
@@ -31,9 +46,13 @@ public class KellosRats {
 
         }
 
-        private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTab() == ModCreativeModeTabs.KELLOS_RATS.get()) {
+            event.accept(ModItems.RAT);
+            event.accept(ModItems.RAT_TAIL);
+            event.accept(ModItems.RAT_FUR);
         }
+    }
 
         @SubscribeEvent
         public void onServerStarting(ServerStartingEvent event) {
@@ -44,7 +63,7 @@ public class KellosRats {
 public static class ClientModEvents {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
-
+        EntityRenderers.register(ModEntities.RAT.get(), RatRenderer::new);
     }
 }
 }

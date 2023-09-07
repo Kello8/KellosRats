@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "minecraft:swamp",
+    "minecraft:badlands",
+    "minecraft:desert"
+  ],
+  "spawners": {
+    "type": "kellorats:rat",
+    "weight": 130,
+    "minCount": 1,
+    "maxCount": 7
+  }
+}

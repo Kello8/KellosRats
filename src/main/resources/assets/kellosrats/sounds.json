@@ -1,0 +1,22 @@
+{
+ "rat_squeak": {
+  "subtitle": "sounds.kellosrats.rat_squeak",
+  "sounds": [
+   "kellosrats:rat_squeak"
+  ]
+ },
+
+ "rat_hurt": {
+  "subtitle": "sounds.kellosrats.rat_hurt",
+  "sounds": [
+   "kellosrats:rat_hurt"
+  ]
+ },
+
+ "rat_death": {
+  "subtitle": "sounds.kellosrats.rat_death",
+  "sounds": [
+   "kellosrats:rat_death"
+  ]
+ }
+}

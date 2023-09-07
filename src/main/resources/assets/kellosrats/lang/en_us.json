@@ -1,0 +1,13 @@
+{
+  "item.kellosrats.rat": "Rat",
+  "item.kellosrats.rat_fur": "Rat Fur",
+  "item.kellosrats.rat_tail": "Rat Tail",
+
+  "entity.kellosrats.rat": "Rat",
+
+  "sounds.kellosrats.rat_squeak": "Rat squeaks",
+  "sounds.kellosrats.rat_hurt": "Rat hurts",
+  "sounds.kellosrats.rat_death": "Rat dies",
+
+  "creativemodetab.kellos_rats": "Kello's Rats"
+}
