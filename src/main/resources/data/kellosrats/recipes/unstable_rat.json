@@ -1,25 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "#": {
-      "item": "kellomod:rat_tail"
-    },
     "A": {
-      "item": "minecraft:diamond"
+      "item": "kellosrats:rat"
     },
     "B": {
-      "item": "minecraft:bone_block"
+      "item": "minecraft:sand"
     },
     "X": {
-      "item": "kellomod:rat_fur"
+      "item": "minecraft:gunpowder"
     }
   },
   "pattern": [
     "XBX",
     "BAB",
-    "X#X"
+    "XBX"
   ],
   "result": {
-    "item": "kellomod:rat"
+    "item": "kellosrats:unstable_rat"
   }
 }
