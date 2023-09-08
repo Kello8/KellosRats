@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "minecraft:nether_star"
+    },
+    "#": {
+      "item": "minecraft:tnt"
+    },
+    "B": {
+      "item": "kellosrats:unstable_rat"
+    },
+    "X": {
+      "item": "minecraft:netherite_scrap"
+    }
+  },
+  "pattern": [
+    "X#X",
+    "BAB",
+    "X#X"
+  ],
+  "result": {
+    "item": "kellosrats:bomb_rat"
+  }
+}

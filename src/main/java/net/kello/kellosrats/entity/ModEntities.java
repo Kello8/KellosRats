@@ -1,7 +1,9 @@
 package net.kello.kellosrats.entity;
 
 import net.kello.kellosrats.KellosRats;
+import net.kello.kellosrats.entity.custom.BombRatEntity;
 import net.kello.kellosrats.entity.custom.RatEntity;
+import net.kello.kellosrats.entity.custom.UnstableRatEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -19,6 +21,16 @@ public class ModEntities {
                     () -> EntityType.Builder.of(RatEntity::new, MobCategory.MONSTER)
                             .sized(0.6f, 0.3f)
                             .build(new ResourceLocation(KellosRats.MOD_ID, "rat").toString()));
+    public static final RegistryObject<EntityType<UnstableRatEntity>> UNSTABLE_RAT =
+            ENTITY_TYPES.register("unstable_rat",
+                    () -> EntityType.Builder.of(UnstableRatEntity::new, MobCategory.MONSTER)
+                            .sized(0.6f, 0.3f)
+                            .build(new ResourceLocation(KellosRats.MOD_ID, "unstable_rat").toString()));
+    public static final RegistryObject<EntityType<BombRatEntity>> BOMB_RAT =
+            ENTITY_TYPES.register("bomb_rat",
+                    () -> EntityType.Builder.of(BombRatEntity::new, MobCategory.MONSTER)
+                            .sized(0.6f, 0.3f)
+                            .build(new ResourceLocation(KellosRats.MOD_ID, "bomb_rat").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

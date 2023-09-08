@@ -2,7 +2,9 @@ package net.kello.kellosrats;
 
 import com.mojang.logging.LogUtils;
 import net.kello.kellosrats.entity.ModEntities;
+import net.kello.kellosrats.entity.client.BombRatRenderer;
 import net.kello.kellosrats.entity.client.RatRenderer;
+import net.kello.kellosrats.entity.client.UnstableRatRenderer;
 import net.kello.kellosrats.item.ModCreativeModeTabs;
 import net.kello.kellosrats.item.ModItems;
 import net.kello.kellosrats.sound.ModSounds;
@@ -49,6 +51,8 @@ public class KellosRats {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTab() == ModCreativeModeTabs.KELLOS_RATS.get()) {
             event.accept(ModItems.RAT);
+            event.accept(ModItems.UNSTABLE_RAT);
+            event.accept(ModItems.BOMB_RAT);
             event.accept(ModItems.RAT_TAIL);
             event.accept(ModItems.RAT_FUR);
         }
@@ -64,6 +68,8 @@ public static class ClientModEvents {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         EntityRenderers.register(ModEntities.RAT.get(), RatRenderer::new);
+        EntityRenderers.register(ModEntities.UNSTABLE_RAT.get(), UnstableRatRenderer::new);
+        EntityRenderers.register(ModEntities.BOMB_RAT.get(), BombRatRenderer::new);
     }
 }
 }

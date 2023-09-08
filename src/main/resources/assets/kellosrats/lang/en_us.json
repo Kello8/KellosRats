@@ -1,9 +1,13 @@
 {
   "item.kellosrats.rat": "Rat",
+  "item.kellosrats.unstable_rat": "Unstable Rat",
+  "item.kellosrats.bomb_rat": "Bomb Rat",
   "item.kellosrats.rat_fur": "Rat Fur",
   "item.kellosrats.rat_tail": "Rat Tail",
 
   "entity.kellosrats.rat": "Rat",
+  "entity.kellosrats.unstable_rat": "Unstable Rat",
+  "entity.kellosrats.bomb_rat": "Bomb Rat",
 
   "sounds.kellosrats.rat_squeak": "Rat squeaks",
   "sounds.kellosrats.rat_hurt": "Rat hurts",

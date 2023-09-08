@@ -2,7 +2,9 @@ package net.kello.kellosrats.event;
 
 import net.kello.kellosrats.KellosRats;
 import net.kello.kellosrats.entity.ModEntities;
+import net.kello.kellosrats.entity.custom.BombRatEntity;
 import net.kello.kellosrats.entity.custom.RatEntity;
+import net.kello.kellosrats.entity.custom.UnstableRatEntity;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -16,6 +18,8 @@ public class ModEvents {
     @SubscribeEvent
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
         event.put(ModEntities.RAT.get(), RatEntity.setAttributes());
+        event.put(ModEntities.UNSTABLE_RAT.get(), UnstableRatEntity.setAttributes());
+        event.put(ModEntities.BOMB_RAT.get(), BombRatEntity.setAttributes());
     }
 
     @SubscribeEvent
