@@ -6,9 +6,9 @@
     "minecraft:desert"
   ],
   "spawners": {
-    "type": "kellorats:rat",
-    "weight": 130,
+    "type": "kellosrats:rat",
+    "weight": 15,
     "minCount": 1,
-    "maxCount": 7
+    "maxCount": 4
   }
 }

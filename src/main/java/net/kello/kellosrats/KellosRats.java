@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.kello.kellosrats.entity.ModEntities;
 import net.kello.kellosrats.entity.client.BombRatRenderer;
 import net.kello.kellosrats.entity.client.RatRenderer;
+import net.kello.kellosrats.entity.client.SnowRatRenderer;
 import net.kello.kellosrats.entity.client.UnstableRatRenderer;
 import net.kello.kellosrats.item.ModCreativeModeTabs;
 import net.kello.kellosrats.item.ModItems;
@@ -53,6 +54,7 @@ public class KellosRats {
             event.accept(ModItems.RAT);
             event.accept(ModItems.UNSTABLE_RAT);
             event.accept(ModItems.BOMB_RAT);
+            event.accept(ModItems.SNOW_RAT);
             event.accept(ModItems.RAT_TAIL);
             event.accept(ModItems.RAT_FUR);
         }
@@ -68,6 +70,7 @@ public static class ClientModEvents {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         EntityRenderers.register(ModEntities.RAT.get(), RatRenderer::new);
+        EntityRenderers.register(ModEntities.SNOW_RAT.get(), SnowRatRenderer::new);
         EntityRenderers.register(ModEntities.UNSTABLE_RAT.get(), UnstableRatRenderer::new);
         EntityRenderers.register(ModEntities.BOMB_RAT.get(), BombRatRenderer::new);
     }

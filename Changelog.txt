@@ -4,6 +4,8 @@
 - Remade Bomb Rat Textures and Model for more personality
 - All Rats are now afraid of Cats
 - Bomb Rat is deathly afraid of Ender Dragon and Wither as a band aid fix to avoid insta killing them.
+- Added Snow Rat
+- Changed Spawn rates for Rat
 --
 0.1
 - Added 3 Rats

@@ -22,7 +22,7 @@ public class RatRenderer extends GeoEntityRenderer<RatEntity> {
     public void render(RatEntity entity, float entityYaw, float partialTick, PoseStack poseStack,
                        MultiBufferSource bufferSource, int packedLight) {
         if(entity.isBaby()) {
-            poseStack.scale(0.5f, 0.5f, 0.5f);
+            poseStack.scale(0.7f, 0.7f, 0.7f);
         }
 
         super.render(entity, entityYaw, partialTick, poseStack, bufferSource, packedLight);

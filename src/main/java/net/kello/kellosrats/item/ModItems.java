@@ -16,6 +16,9 @@ public class ModItems {
     public static final RegistryObject<Item> RAT = ITEMS.register("rat",
             () -> new ForgeSpawnEggItem(ModEntities.RAT, 0x614023, 0x8f5d31,
                         new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SNOW_RAT = ITEMS.register("snow_rat",
+            () -> new ForgeSpawnEggItem(ModEntities.SNOW_RAT, 0x614023, 0x8f5d31,
+                    new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> UNSTABLE_RAT = ITEMS.register("unstable_rat",
             () -> new ForgeSpawnEggItem(ModEntities.UNSTABLE_RAT, 0x614023, 0x8f5d31,
                     new Item.Properties().stacksTo(1)));

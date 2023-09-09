@@ -1,11 +1,13 @@
 {
   "item.kellosrats.rat": "Rat",
+  "item.kellosrats.snow_rat": "Snow Rat",
   "item.kellosrats.unstable_rat": "Unstable Rat",
   "item.kellosrats.bomb_rat": "Bomb Rat",
   "item.kellosrats.rat_fur": "Rat Fur",
   "item.kellosrats.rat_tail": "Rat Tail",
 
   "entity.kellosrats.rat": "Rat",
+  "entity.kellosrats.snow_rat": "Snow Rat",
   "entity.kellosrats.unstable_rat": "Unstable Rat",
   "entity.kellosrats.bomb_rat": "Bomb Rat",
 
