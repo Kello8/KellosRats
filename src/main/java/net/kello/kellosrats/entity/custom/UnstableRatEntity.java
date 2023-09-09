@@ -70,6 +70,7 @@ public class UnstableRatEntity extends TamableAnimal implements GeoEntity {
     protected void registerGoals() {
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setAlertOthers());
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, false));
+        this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Cat.class, 6.0F, 1.0D, 1.2D));
         this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, 0.6F));
         this.goalSelector.addGoal(7, new FollowOwnerGoal(this, 1.0D, 10.0F, 5.0F, true));
         this.goalSelector.addGoal(8, new SitWhenOrderedToGoal(this));

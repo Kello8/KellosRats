@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.rat.idle": {
+		"animation.bomb_rat.idle": {
 			"loop": true,
 			"animation_length": 2.16667,
 			"bones": {
@@ -166,7 +166,7 @@
 				}
 			}
 		},
-		"animation.rat.walk": {
+		"animation.bomb_rat.walk": {
 			"loop": true,
 			"animation_length": 0.58333,
 			"bones": {
@@ -356,7 +356,7 @@
 				}
 			}
 		},
-		"animation.rat.attack": {
+		"animation.bomb_rat.attack": {
 			"animation_length": 0.20833,
 			"bones": {
 				"torso": {
