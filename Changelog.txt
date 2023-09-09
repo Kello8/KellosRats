@@ -1,0 +1,14 @@
+0.2
+- Fixed Unstable Rat Animations
+- Remade Bomb Rat Animations to give more personality (Previous animation was also broken)
+- Remade Bomb Rat Textures and Model for more personality
+- All Rats are now afraid of Cats
+- Bomb Rat is deathly afraid of Ender Dragon and Wither as a band aid fix to avoid insta killing them.
+--
+0.1
+- Added 3 Rats
+  - Rat
+  - Unstable Rat
+  - Bomb Rat
+
+- Added Recipes to Craft Rats
