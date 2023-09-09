@@ -1,4 +1,4 @@
-# KellosRats v0.2 Release
+# KellosRats v0.1 Release
 
 - Added 3 Rats
   - Rat
