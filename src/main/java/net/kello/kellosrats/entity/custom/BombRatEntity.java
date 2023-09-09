@@ -20,6 +20,8 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.Cat;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
+import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.monster.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeItem;
@@ -70,6 +72,8 @@ public class BombRatEntity extends TamableAnimal implements GeoEntity {
     @Override
     protected void registerGoals() {
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setAlertOthers());
+        this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, EnderDragon.class, 13.0F, 1.0D, 1.2D));
+        this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, WitherBoss.class, 13.0F, 1.0D, 1.2D));
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, false));
         this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Cat.class, 6.0F, 1.0D, 1.2D));
         this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, 0.6F));
