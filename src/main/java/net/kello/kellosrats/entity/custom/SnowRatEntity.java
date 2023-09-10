@@ -78,6 +78,7 @@ public class SnowRatEntity extends Animal implements GeoEntity {
         this.goalSelector.addGoal(11, new FollowParentGoal(this, 1.25D));
 
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Silverfish.class, true));
+        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Chicken.class, true));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Spider.class, true));
         this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, Rabbit.class, true));
         this.targetSelector.addGoal(6, new NearestAttackableTargetGoal<>(this, Parrot.class, true));
@@ -88,7 +89,7 @@ public class SnowRatEntity extends Animal implements GeoEntity {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob ageableMob) {
-        return ModEntities.RAT.get().create(level);
+        return ModEntities.SNOW_RAT.get().create(level);
     }
 
     public boolean doHurtTarget(Entity p_32892_) {
@@ -104,7 +105,7 @@ public class SnowRatEntity extends Animal implements GeoEntity {
     private <T extends GeoAnimatable> PlayState attackPredirate(AnimationState<T> tAnimationState) {
         if(this.swinging && tAnimationState.getController().getAnimationState().equals(AnimationController.State.STOPPED)) {
             tAnimationState.getController().forceAnimationReset();
-            tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.rat.attack", Animation.LoopType.PLAY_ONCE));
+            tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.snow_rat.attack", Animation.LoopType.PLAY_ONCE));
             this.swinging = false;
         }
 
